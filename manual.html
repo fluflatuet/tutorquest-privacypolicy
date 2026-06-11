@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorQuest - Parent Handbook</title>
+    <style>
+        :root {
+            --bg-color: #FDF5E6;
+            --card-bg: #FFFFFF;
+            --primary-color: #2196F3;
+            --secondary-color: #FFB74D;
+            --text-color: #3E2723;
+            --muted-text: #757575;
+            --accent-color: #9C27B0;
+            --border-radius: 20px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .screenshot-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: #f0f0f0;
+            border: 3px dashed #cccccc;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            color: #999999;
+            transition: all 0.3s ease;
+        }
+
+        .screenshot-placeholder svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 10px;
+            fill: #cccccc;
+        }
+
+        .screenshot-placeholder:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* New screenshot/figure styles for embedded WebP images */
+        figure.screenshot {
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        figure.screenshot img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: cover;
+        }
+
+        figure.screenshot figcaption {
+            padding: 12px 16px;
+            font-size: 0.95rem;
+            color: var(--muted-text);
+            background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98));
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            background: var(--primary-color);
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .input-method {
+            margin-bottom: 40px;
+        }
+
+        .input-method h3 {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-method h3 span {
+            background: var(--secondary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: var(--muted-text);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Parent Handbook</h1>
+        <p>A guide to the pedagogical philosophy and mechanics of TutorQuest.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Philosophy Section -->
+        <section class="card">
+            <h2>Welcome & Philosophy</h2>
+            <p>
+                TutorQuest is designed with a <span class="highlight">Privacy-by-Design</span> framework.
+                Everything happens locally on your device. We do not track, profile, or transmit your child's
+                learning data to any external cloud servers. It is a safe, offline sanctuary for mathematical discovery.
+            </p>
+            <p>
+                The interface is intentionally <span class="highlight">Non-Reader Friendly</span>.
+                We rely on intuitive icons, symbols, and adaptive UI components rather than heavy blocks of text.
+                This allows young learners to navigate the journey of mathematics independently,
+                building confidence through interaction rather than instruction.
+            </p>
+        </section>
+
+        <!-- Core Learning Stages -->
+        <section class="card">
+            <h2>Learning Stages (The Inputs)</h2>
+            <p>Mathematics in TutorQuest is introduced through four distinct tactile stages, each tailored to a specific cognitive leap in development.</p>
+            <p>Below are representative screenshots for each stage. Each image highlights the primary interaction pattern and UI elements you will see in the app; captions explain what the child sees and how the stage supports learning.</p>
+
+            <div class="input-method">
+                <h3><span>1</span> Finger Count Stage</h3>
+                <p>
+                    Tactical 0–10 math using realistic tap-to-count hand layouts. This stage builds a physical bridge
+                    between abstract numbers and their physical representation.
+                    <br><strong>Progression:</strong> Level 1 limits to 1 hand (max 5); Level 2 expands to 2 hands (max 10).
+                </p>
+                <figure class="screenshot">
+                    <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/finger-count.webp" alt="Finger Counting screenshot">
+                    <figcaption>Finger Count view: tap realistic hand layouts to count 0–10. The UI shows level controls and simple feedback.</figcaption>
+                </figure>
+            </div>
+
+            <div class="input-method">
+                <h3><span>2</span> Dice Count Stage</h3>
+                <p>
+                    Focused on visual subitizing—the ability to recognize a group of objects without counting them one by one.
+                    Up to 4 dynamic dice blocks challenge the child to instantly recognize sums.
+                    <br><strong>Progression:</strong> Levels 1–4 scale from 1 die up to 4 dice (max value 24).
+                </p>
+                <figure class="screenshot">
+                    <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/dice-subitizing.webp" alt="Dice subitizing screenshot">
+                    <figcaption>Dice Subitizing: instant-recognition challenges using 1–4 dice to build subitizing skills and fast addition.</figcaption>
+                </figure>
+            </div>
+
+            <div class="input-method">
+                <h3><span>3</span> Number Wheel Stage</h3>
+                <p>
+                    Smooth navigation through numeric ranges using a physical "wheel" scroll. This helps the child
+                    visualize the relative distance between numbers and the linear nature of the number line.
+                    <br><strong>Progression:</strong> 6 Levels covering ranges from 0-10 up to 0-100.
+                </p>
+                <figure class="screenshot">
+                    <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/number-wheel.webp" alt="Number wheel screenshot">
+                    <figcaption>Number Wheel: smooth scrolling wheel to explore ranges and visualize numeric distance on a tactile number line.</figcaption>
+                </figure>
+            </div>
+
+            <div class="input-method">
+                <h3><span>4</span> Math Expert (Numeric Input)</h3>
+                <p>
+                    Standard abstract calculations using a numeric keypad. This final stage transitions the child
+                    to the formal notation used in advanced schooling.
+                    <br><strong>Progression:</strong> 11 Levels from 0-10 up to 0-1000, incorporating addition and subtraction.
+                </p>
+                <figure class="screenshot">
+                    <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/numeric-entry.webp" alt="Numeric entry screenshot">
+                    <figcaption>Numeric Entry: classic keypad input for formal calculations, preparing children for school-style arithmetic.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Game Modes & Progression -->
+        <section class="card">
+            <h2>Campaign Progression</h2>
+            <div class="badge">90s Gamer Logic</div>
+            <p>
+                TutorQuest uses a classic "starline" progression system. In <strong>Beginner</strong> and <strong>Advanced</strong> modes,
+                children follow a path of padlocked levels. To unlock a new level, the child must complete
+                <span class="highlight">3 custom papers</span> at their currently active level.
+                This ensures a steady mastery of each stage before moving on.
+            </p>
+
+            <h3>The Masterpiece Loop (Tutor Mode)</h3>
+            <p>
+                This is the crown jewel of our role-reversal pedagogy. In Tutor Mode, the child becomes the teacher.
+                They design a worksheet of 5 problems for their virtual "Companion" to solve.
+            </p>
+            <p>
+                The catch? The Companion isn't perfect. It is programmed to make <span class="highlight">realistic, intentional mistakes</span>.
+                The child must then check the Companion's work, identify the errors, correct them, and finally stamp
+                the worksheet with an emoji grade. These completed "Masterpieces" are saved to the <span class="highlight">My Collection</span> album
+                and can even be re-played as a student later for bonus rewards!
+            </p>
+        </section>
+
+        <!-- Reward Economy -->
+        <section class="card">
+            <h2>Rewards & Customization</h2>
+            <p>
+                By solving equations and grading masterpieces, children earn gold coins. These are saved safely in their
+                local wallet and can be spent in the <strong>Avatar Shop</strong>.
+            </p>
+            <ul>
+                <li><strong>Avatar Gear:</strong> Unlock cozy onesies, shirts, pants, shoes, and stylish glasses.</li>
+                <li><strong>Personalization:</strong> Purchase unique hair colors to make the character their own.</li>
+                <li><strong>Workbench Tools:</strong> Unlock premium notebook stationary and varied handwriting fonts to change the look of the "Masterpiece" papers.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2024 Filadendron &bull; Designed for the Mathematicians of tomorrow.
+    </footer>
+
+</body>
+</html>
