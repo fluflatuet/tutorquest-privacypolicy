@@ -51,7 +51,7 @@
 
         h3 {
             font-size: 1.3rem;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
         }
 
         p {
@@ -72,6 +72,14 @@
             border: 1px solid rgba(0,0,0,0.05);
         }
 
+        .screenshot {
+            width: 100%;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+
         .screenshot-placeholder {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -84,7 +92,6 @@
             align-items: center;
             margin: 20px 0;
             color: #999999;
-            transition: all 0.3s ease;
         }
 
         .screenshot-placeholder svg {
@@ -92,35 +99,6 @@
             height: 48px;
             margin-bottom: 10px;
             fill: #cccccc;
-        }
-
-        .screenshot-placeholder:hover {
-            border-color: var(--primary-color);
-            color: var(--primary-color);
-        }
-
-        /* New screenshot/figure styles for embedded WebP images */
-        figure.screenshot {
-            margin: 20px 0;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-            border: 1px solid rgba(0,0,0,0.04);
-        }
-
-        figure.screenshot img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-height: 420px;
-            object-fit: cover;
-        }
-
-        figure.screenshot figcaption {
-            padding: 12px 16px;
-            font-size: 0.95rem;
-            color: var(--muted-text);
-            background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98));
         }
 
         .highlight {
@@ -161,6 +139,17 @@
             font-size: 0.9rem;
         }
 
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .image-grid img {
+            margin: 0;
+        }
+
         footer {
             text-align: center;
             padding: 40px;
@@ -189,6 +178,7 @@
         <!-- Philosophy Section -->
         <section class="card">
             <h2>Welcome & Philosophy</h2>
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_dashboardwithallmainfunctions.webp" class="screenshot" alt="Dashboard Overview">
             <p>
                 TutorQuest is designed with a <span class="highlight">Privacy-by-Design</span> framework.
                 Everything happens locally on your device. We do not track, profile, or transmit your child's
@@ -202,59 +192,12 @@
             </p>
         </section>
 
-        <!-- App Screenshots & Notes -->
-        <section class="card">
-            <h2>App Screenshots & Notes</h2>
-            <p>Below are representative screens from the TutorQuest app with short notes describing their purpose and how they support learning.</p>
-
-            <figure class="screenshot">
-                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/gameplay-fruit-dice.webp" alt="Gameplay: fruit addition with dice result">
-                <figcaption>Gameplay example: objects (strawberries) are used to form simple addition problems and the die result reinforces counting-to-solve strategies and subitizing.</figcaption>
-            </figure>
-
-            <figure class="screenshot">
-                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/avatar-selection-1.webp" alt="Avatar face and color selection">
-                <figcaption>Avatar customization: children pick a base avatar, facial features and color swatches. Visual personalization increases engagement and ownership.</figcaption>
-            </figure>
-
-            <figure class="screenshot">
-                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/avatar-selection-2.webp" alt="Avatar wardrobe and shop icons">
-                <figcaption>Avatar Shop & wardrobe: coins earned in the game can be spent on clothes and accessories — reinforces reward economy and motivation.</figcaption>
-            </figure>
-
-            <figure class="screenshot">
-                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/check-answer.webp" alt="Check answer confirmation screen">
-                <figcaption>Quick-check view: child or parent can mark whether an auto-generated answer is correct. Used both in gameplay and in Tutor Mode review.</figcaption>
-            </figure>
-
-            <figure class="screenshot">
-                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/masterpiece-sheet.webp" alt="Masterpiece worksheet with ticks and crosses">
-                <figcaption>Masterpiece / Worksheet: completed sheets show the Companion's answers with corrections. These are saved to the child's collection for replay or sharing.</figcaption>
-            </figure>
-
-            <figure class="screenshot">
-                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/backgrounds-paper-handwriting.webp" alt="Backgrounds, paper style and handwriting options">
-                <figcaption>Personalization controls: choose backgrounds, paper styles and handwriting fonts to tailor the look and feel of problems and saved worksheets.</figcaption>
-            </figure>
-
-            <figure class="screenshot">
-                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/icons-grid.webp" alt="Main menu icons for input stages">
-                <figcaption>Main menu icons: the four core input stages (finger, dice, wheel, numeric) are accessible from the home screen for easy stage-switching.</figcaption>
-            </figure>
-
-            <figure class="screenshot">
-                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/home-progression.webp" alt="Home screen with coins and progress indicators">
-                <figcaption>Home & progression overview: coins, collection counts and level progress are shown on the home screen to make progress visible and rewarding.</figcaption>
-            </figure>
-
-            <p>If you'd like, I can also copy these images into the repository so the manual works offline, and update the `img` links to local files. Would you like me to do that?</p>
-        </section>
-
         <!-- Core Learning Stages -->
         <section class="card">
             <h2>Learning Stages (The Inputs)</h2>
             <p>Mathematics in TutorQuest is introduced through four distinct tactile stages, each tailored to a specific cognitive leap in development.</p>
-            <p>Below are representative screenshots for each stage. Each image highlights the primary interaction pattern and UI elements you will see in the app; captions explain what the child sees and how the stage supports learning.</p>
+
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_inputmodes.webp" class="screenshot" alt="Input Modes Selection">
 
             <div class="input-method">
                 <h3><span>1</span> Finger Count Stage</h3>
@@ -263,10 +206,6 @@
                     between abstract numbers and their physical representation.
                     <br><strong>Progression:</strong> Level 1 limits to 1 hand (max 5); Level 2 expands to 2 hands (max 10).
                 </p>
-                <figure class="screenshot">
-                    <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/finger-count.webp" alt="Finger Counting screenshot">
-                    <figcaption>Finger Count view: tap realistic hand layouts to count 0–10. The UI shows level controls and simple feedback.</figcaption>
-                </figure>
             </div>
 
             <div class="input-method">
@@ -276,10 +215,7 @@
                     Up to 4 dynamic dice blocks challenge the child to instantly recognize sums.
                     <br><strong>Progression:</strong> Levels 1–4 scale from 1 die up to 4 dice (max value 24).
                 </p>
-                <figure class="screenshot">
-                    <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/dice-subitizing.webp" alt="Dice subitizing screenshot">
-                    <figcaption>Dice Subitizing: instant-recognition challenges using 1–4 dice to build subitizing skills and fast addition.</figcaption>
-                </figure>
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_beginnerdicelevle1.webp" class="screenshot" alt="Dice Counting Mode">
             </div>
 
             <div class="input-method">
@@ -289,10 +225,6 @@
                     visualize the relative distance between numbers and the linear nature of the number line.
                     <br><strong>Progression:</strong> 6 Levels covering ranges from 0-10 up to 0-100.
                 </p>
-                <figure class="screenshot">
-                    <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/number-wheel.webp" alt="Number wheel screenshot">
-                    <figcaption>Number Wheel: smooth scrolling wheel to explore ranges and visualize numeric distance on a tactile number line.</figcaption>
-                </figure>
             </div>
 
             <div class="input-method">
@@ -302,10 +234,6 @@
                     to the formal notation used in advanced schooling.
                     <br><strong>Progression:</strong> 11 Levels from 0-10 up to 0-1000, incorporating addition and subtraction.
                 </p>
-                <figure class="screenshot">
-                    <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/numeric-entry.webp" alt="Numeric entry screenshot">
-                    <figcaption>Numeric Entry: classic keypad input for formal calculations, preparing children for school-style arithmetic.</figcaption>
-                </figure>
             </div>
         </section>
 
@@ -325,12 +253,25 @@
                 This is the crown jewel of our role-reversal pedagogy. In Tutor Mode, the child becomes the teacher.
                 They design a worksheet of 5 problems for their virtual "Companion" to solve.
             </p>
+
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_tutormodegivepapertosolve.webp" class="screenshot" alt="Giving problems to the Tutor">
+
             <p>
-                The catch? The Companion isn't perfect. It is programmed to make <span class="highlight">realistic, intentional mistakes</span>.
-                The child must then check the Companion's work, identify the errors, correct them, and finally stamp
-                the worksheet with an emoji grade. These completed "Masterpieces" are saved to the <span class="highlight">My Collection</span> album
-                and can even be re-played as a student later for bonus rewards!
+                The catch? The Companion isn't perfect. It is programmed to make <span class="highlight">intentional mistakes</span>.
+                The child must then check the Companion's work, identify the errors, and correct them.
             </p>
+
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_checkthetutorsanswers.webp" class="screenshot" alt="Checking the Tutor's work">
+
+            <p>
+                Finally, the child stamps the worksheet with an emoji grade. These completed "Masterpieces" are saved to the
+                <span class="highlight">My Collection</span> album and can even be re-played later for bonus rewards!
+            </p>
+
+            <div class="image-grid">
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_mytutorcheckgotdoublechecked.webp" class="screenshot" alt="Double Check Results">
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_savedpaperinmycollection.webp" class="screenshot" alt="Collection Album">
+            </div>
         </section>
 
         <!-- Reward Economy -->
@@ -340,11 +281,19 @@
                 By solving equations and grading masterpieces, children earn gold coins. These are saved safely in their
                 local wallet and can be spent in the <strong>Avatar Shop</strong>.
             </p>
+
+            <div class="image-grid">
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_characterscreencustomizedboy.webp" class="screenshot" alt="Customized Boy Avatar">
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_characterscreencustomizedgirl.webp" class="screenshot" alt="Customized Girl Avatar">
+            </div>
+
             <ul>
                 <li><strong>Avatar Gear:</strong> Unlock cozy onesies, shirts, pants, shoes, and stylish glasses.</li>
                 <li><strong>Personalization:</strong> Purchase unique hair colors to make the character their own.</li>
                 <li><strong>Workbench Tools:</strong> Unlock premium notebook stationary and varied handwriting fonts to change the look of the "Masterpiece" papers.</li>
             </ul>
+
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_custumizebackgroundpaperstylefont.webp" class="screenshot" alt="Workbench Customization">
         </section>
 
     </div>
