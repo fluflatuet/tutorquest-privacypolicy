@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorQuest - Guide des parents</title>
+    <style>
+        :root {
+            --bg-color: #FDF5E6;
+            --card-bg: #FFFFFF;
+            --primary-color: #2196F3;
+            --secondary-color: #FFB74D;
+            --text-color: #3E2723;
+            --muted-text: #757575;
+            --accent-color: #9C27B0;
+            --border-radius: 20px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .screenshot {
+            width: 100%;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+
+        .screenshot-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: #f0f0f0;
+            border: 3px dashed #cccccc;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            color: #999999;
+        }
+
+        .screenshot-placeholder svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 10px;
+            fill: #cccccc;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            background: var(--primary-color);
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .input-method {
+            margin-bottom: 40px;
+        }
+
+        .input-method h3 {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-method h3 span {
+            background: var(--secondary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            font-size: 0.9rem;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .image-grid img {
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: var(--muted-text);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Guide des parents</h1>
+        <p>Un manuel pour comprendre la philosophie pédagogique et les mécaniques de TutorQuest.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Philosophy Section -->
+        <section class="card">
+            <h2>Bienvenue & Philosophie</h2>
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_DashboardWithAllMainFunctions.webp" class="screenshot" alt="Aperçu du tableau de bord">
+            <p>
+                TutorQuest est conçu selon une approche de <span class="highlight">Respect de la vie privée dès la conception</span> (Privacy-by-Design).
+                Tout se déroule localement sur votre appareil. Nous ne suivons pas, ne profilons pas et ne transmettons pas les données
+                d'apprentissage de votre enfant à des serveurs cloud externes. C'est un sanctuaire hors ligne et sécurisé dédié à la découverte des mathématiques.
+            </p>
+            <p>
+                L'interface est volontairement <span class="highlight">adaptée aux non-lecteurs</span>.
+                Nous nous appuyons sur des icônes intuitives, des symboles et des composants visuels adaptatifs plutôt que sur de lourds blocs de texte.
+                Cela permet aux jeunes apprenants de naviguer de manière autonome dans leur parcours mathématique,
+                en renforçant leur confiance par l'interaction plutôt que par la consigne écrite.
+            </p>
+        </section>
+
+        <!-- Core Learning Stages -->
+        <section class="card">
+            <h2>Étapes d'apprentissage (Les modes de saisie)</h2>
+            <p>Dans TutorQuest, les mathématiques sont introduites à travers quatre étapes tactiles distinctes, chacune adaptée à un cap cognitif spécifique du développement de l'enfant.</p>
+
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_InputModes.webp" class="screenshot" alt="Sélection des modes de saisie">
+
+            <div class="input-method">
+                <h3><span>1</span> Étape : Compter sur les doigts</h3>
+                <p>
+                    Des mathématiques tactiles de 0 à 10 utilisant des mains réalistes sur lesquelles il suffit d'appuyer pour compter. Cette étape crée un pont physique
+                    entre les nombres abstraits et leur représentation concrète.
+                    <br><strong>Progression :</strong> Le niveau 1 se limite à 1 main (max 5) ; le niveau 2 s'étend à 2 mains (max 10).
+                </p>
+            </div>
+
+            <div class="input-method">
+                <h3><span>2</span> Étape : Compter les dés</h3>
+                <p>
+                    Axé sur la subitisation visuelle — la capacité à reconnaître instantanément une quantité d'objets sans avoir à les compter un par un.
+                    Jusqu'à 4 dés dynamiques mettent l'enfant au défi de reconnaître immédiatement des sommes.
+                    <br><strong>Progression :</strong> Les niveaux 1 à 4 évoluent de 1 dé jusqu'à 4 dés (valeur maximale de 24).
+                </p>
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_BeginnerDiceLevel1.webp" class="screenshot" alt="Mode de comptage avec des dés">
+            </div>
+
+            <div class="input-method">
+                <h3><span>3</span> Étape : La roue des nombres</h3>
+                <p>
+                    Une navigation fluide à travers les plages numériques grâce au défilement d'une "roue" physique. Cela aide l'enfant à
+                    visualiser la distance relative entre les nombres et la nature linéaire de la ligne numérique.
+                    <br><strong>Progression :</strong> 6 niveaux couvrant des plages allant de 0-10 jusqu'à 0-100.
+                </p>
+            </div>
+
+            <div class="input-method">
+                <h3><span>4</span> Expert en maths (Saisie numérique)</h3>
+                <p>
+                    Des calculs abstraits classiques à l'aide d'un pavé numérique. Cette dernière étape permet à l'enfant de faire la transition
+                    vers la notation formelle utilisée à l'école.
+                    <br><strong>Progression :</strong> 11 niveaux de 0-10 jusqu'à 0-1000, intégrant l'addition et la soustraction.
+                </p>
+            </div>
+        </section>
+
+        <!-- Game Modes & Progression -->
+        <section class="card">
+            <h2>Progression de la campagne</h2>
+            <div class="badge">Logique de joueur des années 90</div>
+            <p>
+                TutorQuest utilise un système classique de progression par "constellations de niveaux". Dans les modes <strong>Débutant</strong> et <strong>Avancé</strong>,
+                les enfants suivent un chemin jalonné de niveaux cadenassés. Pour déverrouiller un nouveau niveau, l'enfant doit compléter
+                <span class="highlight">3 fiches d'exercices personnalisées</span> dans son niveau actuel.
+                Cela garantit une maîtrise solide de chaque étape avant de passer à la suite.
+            </p>
+
+            <h3>La boucle du chef-d'œuvre (Mode Tuteur)</h3>
+            <p>
+                C'est le joyau de notre pédagogie d'inversion des rôles. Dans le mode Tuteur, l'enfant devient l'enseignant.
+                Il conçoit une fiche de 5 problèmes que son « compagnon » virtuel doit résoudre.
+            </p>
+
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_TutorModeGivePaperToSolve.webp" class="screenshot" alt="Donner des problèmes à résoudre au Tuteur">
+
+            <p>
+                Le piège ? Le compagnon n'est pas parfait. Il est programmé pour faire des <span class="highlight">erreurs intentionnelles</span>.
+                L'enfant doit alors vérifier le travail du compagnon, identifier les erreurs et les corriger.
+            </p>
+
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_CheckTheTutorsAnswers.webp" class="screenshot" alt="Vérification du travail du Tuteur">
+
+            <p>
+                Enfin, l'enfant tamponne la fiche avec une note sous forme d'emoji. Ces « chefs-d'œuvre » terminés sont sauvegardés dans l'album
+                <span class="highlight">Ma Collection</span> et peuvent même être rejoués plus tard pour obtenir des récompenses bonus !
+            </p>
+
+            <div class="image-grid">
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_MyTutorCheckGotDoubleChecked.webp" class="screenshot" alt="Résultats de la double vérification">
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_SavedPaperInMyCollection.webp" class="screenshot" alt="Album de collection">
+            </div>
+        </section>
+
+        <!-- Reward Economy -->
+        <section class="card">
+            <h2>Récompenses & Personnalisation</h2>
+            <p>
+                En résolvant des équations et en évaluant des chefs-d'œuvre, les enfants gagnent des pièces d'or. Celles-ci sont conservées en toute sécurité dans leur
+                portefeuille local et peuvent être dépensées dans la <strong>Boutique d'avatars</strong>.
+            </p>
+
+            <div class="image-grid">
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_CharacterScreenCustomizedBoy.webp" class="screenshot" alt="Avatar garçon personnalisé">
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_CharacterScreenCustomizedGirl.webp" class="screenshot" alt="Avatar fille personnalisé">
+            </div>
+
+            <ul>
+                <li><strong>Équipement d'avatar :</strong> Débloquez des grenouillères confortables, des t-shirts, des pantalons, des chaussures et des lunettes stylées.</li>
+                <li><strong>Personnalisation :</strong> Achetez des couleurs de cheveux uniques pour que le personnage soit vraiment à leur image.</li>
+                <li><strong>Outils de l'atelier :</strong> Débloquez des styles de carnets premium et des polices d'écriture manuscrite variées pour changer l'apparence des fiches « chefs-d'œuvre ».</li>
+            </ul>
+
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_CustomizeBackgroundPaperstyleFont.webp" class="screenshot" alt="Personnalisation de l'atelier">
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2024 Filadendron &bull; Conçu pour les mathématiciens de demain.
+    </footer>
+
+</body>
+</html>
