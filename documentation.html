@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorQuest: Math - Technical Documentation</title>
+    <style>
+        :root {
+            --primary-color: #2196F3;
+            --accent-color: #FFAC33;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3e50;
+            --border-color: #e1e4e8;
+            --code-bg: #f1f3f5;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 12px;
+        }
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        h1 { margin: 0; color: var(--primary-color); font-size: 2.5em; }
+        h2 { border-left: 5px solid var(--accent-color); padding-left: 15px; margin-top: 40px; color: #34495e; }
+        h3 { color: #2980b9; margin-top: 25px; }
+        code { background: var(--code-bg); padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', Courier, monospace; font-size: 0.95em; }
+        pre { background: #2d3436; color: #f1f3f5; padding: 20px; border-radius: 8px; overflow-x: auto; }
+        .philosophy {
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #bbdefb;
+            margin: 20px 0;
+        }
+        .philosophy strong { color: #0d47a1; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border-color); }
+        th { background: #f8f9fa; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
+        .badge-premium { background: #fff3e0; color: #e65100; border: 1px solid #ffe0b2; }
+        .badge-free { background: #e8f5e9; color: #1b5e20; border: 1px solid #c8e6c9; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>TutorQuest: Math</h1>
+        <p>Technical Documentation v1.3.5 | Production Readiness Phase</p>
+    </header>
+
+    <section id="overview">
+        <h2>1. Project Overview</h2>
+        <p>TutorQuest is an educational Android application designed to transform math practice into a rewarding role-playing adventure for children. Moving beyond static drills, the app allows children to switch between being the <strong>Student</strong> (solving problems) and the <strong>Tutor</strong> (grading a companion's work).</p>
+        
+        <div class="philosophy">
+            <strong>Privacy-First & Local-Only Philosophy:</strong>
+            <ul>
+                <li><strong>No Cloud Storage:</strong> All user data, progress, and custom worksheets are stored strictly on the physical device.</li>
+                <li><strong>No Analytics/Tracking:</strong> Zero remote telemetry or third-party tracking SDKs are permitted.</li>
+                <li><strong>No Accounts:</strong> Children start playing immediately without email registration or account creation.</li>
+                <li><strong>Safe Environment:</strong> Strict "Privacy-by-Design" ensures no data leaks to the Android system logs in production.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="tech-stack">
+        <h2>2. Technology Stack</h2>
+        <ul>
+            <li><strong>Language:</strong> Kotlin (modern functional style, Coroutines/Flow).</li>
+            <li><strong>UI Framework:</strong> 100% Jetpack Compose (Material 3). No XML layouts.</li>
+            <li><strong>Database:</strong> Room (SQLite) with custom TypeConverters for JSON serialization of math problems.</li>
+            <li><strong>Asset Handling:</strong> Native Android <code>painterResource</code> hooks for multi-layered character rendering.</li>
+            <li><strong>State Management:</strong> Unidirectional Data Flow (UDF) via <code>StateFlow</code> and <code>MutableSharedFlow</code>.</li>
+        </ul>
+    </section>
+
+    <section id="architecture">
+        <h2>3. Core Architecture & Data Flow</h2>
+        <p>The project follows a reactive architecture where the UI observes a single source of truth.</p>
+        <ul>
+            <li><strong>ViewModel Layer:</strong> <code>GameViewModel</code> maintains the <code>GameState</code>. It processes <code>GameEvent</code> intents from the UI and updates the state accordingly.</li>
+            <li><strong>Repository Layer:</strong> <code>UserRepository</code> acts as an abstraction layer for the <code>UserDao</code>, handling data persistence and preference management.</li>
+            <li><strong>UDF Loop:</strong> User Action &rarr; <code>GameEvent</code> &rarr; <code>ViewModel</code> &rarr; <code>GameState</code> (Immutable) &rarr; <code>Compose UI</code> (Recomposition).</li>
+        </ul>
+    </section>
+
+    <section id="database">
+        <h2>4. Database Schema (Room)</h2>
+        <p>The persistent state is managed via three primary entities:</p>
+        
+        <h3><code>UserProfileEntity</code></h3>
+        <p>Stores the core profile data, stats, and settings. Key fields include:</p>
+        <ul>
+            <li><code>currencyBalance</code>: Total coins earned.</li>
+            <li><code>isPremiumUnlocked</code>: Boolean flag for IAP status.</li>
+            <li><code>customDailyLimit</code>: Nullable Integer. <code>null</code> = Unlimited, <code>Int</code> = Custom cap.</li>
+            <li><code>todayPapersCommittedCount</code>: Tracks workload for the current date.</li>
+        </ul>
+
+        <h3><code>user_created_worksheets</code></h3>
+        <p>Stores "Masterpieces" created by the child in Tutor Mode. Problems are stored as a serialized JSON list via GSON Converters.</p>
+
+        <h3><code>unlocked_shop_items</code></h3>
+        <p>A mapping table tracking which <code>ShopItem</code> IDs have been purchased by which <code>profileId</code>.</p>
+    </section>
+
+    <section id="domain-logic">
+        <h2>5. Domain Logic & Avatar System</h2>
+        <p>The character system uses a <strong>Type-Safe Layering Engine</strong> defined in <code>AvatarComponent.kt</code> and <code>ShopRegistry.kt</code>.</p>
+        
+        <h3>Clothing Coverage Enum</h3>
+        <pre><code>enum class ClothingCoverage { 
+    STANDARD,  // Default (Shirt/Pants/Shoes visible)
+    ONESIE,    // Torso + Legs (Hides Bottoms layer)
+    FULLBODY   // Full Costume (Hides Body, Hair, Shoes, Accessories)
+}</code></pre>
+        <p>This enum eliminates brittle string matching (checking for "onesie" in filenames). The <code>ShopRegistry</code> maps every <code>ShopItem</code> to its specific <code>ClothingCoverage</code>, ensuring pixel-perfect layering without clipping.</p>
+    </section>
+
+    <section id="mechanics">
+        <h2>6. Core Features & Mechanics</h2>
+        
+        <h3>The Game Loop</h3>
+        <p>Children earn coins (5–100 based on level) by completing worksheets of 5 equations. Correct answers increment global <code>totalEquationsSolved</code> and progress the level bar (3 worksheets to level up).</p>
+
+        <h3>Daily Limits System</h3>
+        <table>
+            <tr>
+                <th>User Tier</th>
+                <th>Enforcement</th>
+                <th>Behavior</th>
+            </tr>
+            <tr>
+                <td><span class="badge badge-free">Free User</span></td>
+                <td>Hardcoded 3-Paper Cap</td>
+                <td>Triggers the Premium Purchase Gate upon reaching limit.</td>
+            </tr>
+            <tr>
+                <td><span class="badge badge-premium">Premium User</span></td>
+                <td>Customizable Limit</td>
+                <td>Default: <code>Unlimited</code>. Parents can set custom caps (5, 10, 20) via Parent Corner.</td>
+            </tr>
+        </table>
+
+        <h3>The Parent Corner & The "Gate"</h3>
+        <p>To access settings, parents must solve a randomized math challenge (e.g., <em>"What is fifteen plus six?"</em>). This ensures children cannot accidentally modify limits or initiate purchases.</p>
+
+        <h3>The Companion</h3>
+        <p>A dynamic character that reacts with emotions (Surprised, Celebrating, Thinking) based on child performance. It acts as the <strong>companion</strong> in the learning journey, providing visual feedback and encouragement.</p>
+    </section>
+
+    <section id="debug">
+        <h2>7. Debug & Testing Tools</h2>
+        <p>Features wrapped in <code>BuildConfig.DEBUG</code> to prevent exposure to end-users:</p>
+        <ul>
+            <li><strong>TimeProvider:</strong> A singleton allowing developers to override the system date. This is used to test seasonal events (Halloween/Christmas) without modifying the Android OS clock.</li>
+            <li><strong>Developer Shop Row:</strong> A scrollable row in the shop containing "Time Travel" buttons and a <code>DEV: UNLOCK ALL CLOTHES</code> bypass that populates the database with every registry item ID.</li>
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>
+</code>
