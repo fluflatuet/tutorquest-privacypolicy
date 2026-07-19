@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorQuest - Guía para Padres</title>
+    <style>
+        :root {
+            --bg-color: #FDF5E6;
+            --card-bg: #FFFFFF;
+            --primary-color: #2196F3;
+            --secondary-color: #FFB74D;
+            --text-color: #3E2723;
+            --muted-text: #757575;
+            --accent-color: #9C27B0;
+            --border-radius: 20px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .screenshot {
+            width: 100%;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+
+        .screenshot-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: #f0f0f0;
+            border: 3px dashed #cccccc;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            color: #999999;
+        }
+
+        .screenshot-placeholder svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 10px;
+            fill: #cccccc;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            background: var(--primary-color);
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .input-method {
+            margin-bottom: 40px;
+        }
+
+        .input-method h3 {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-method h3 span {
+            background: var(--secondary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            font-size: 0.9rem;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .image-grid img {
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: var(--muted-text);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Guía para Padres</h1>
+        <p>Un manual sobre la filosofía pedagógica y la mecánica de TutorQuest.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Philosophy Section -->
+        <section class="card">
+            <h2>Bienvenida y Filosofía</h2>
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_DashboardWithAllMainFunctions.webp" class="screenshot" alt="Resumen del Panel">
+            <p>
+                TutorQuest está diseñado con un marco de <span class="highlight">Privacidad desde el Diseño (Privacy-by-Design)</span>.
+                Todo sucede localmente en su dispositivo. No rastreamos, perfilamos ni transmitimos los datos de aprendizaje de su hijo
+                a ningún servidor en la nube externo. Es un santuario seguro y sin conexión para el descubrimiento matemático.
+            </p>
+            <p>
+                La interfaz es intencionalmente <span class="highlight">Amigable para No Lectores</span>.
+                Confiamos en iconos intuitivos, símbolos y componentes de interfaz de usuario adaptables en lugar de pesados bloques de texto.
+                Esto permite a los jóvenes estudiantes navegar el viaje de las matemáticas de forma independiente,
+                construyendo confianza a través de la interacción en lugar de la instrucción.
+            </p>
+        </section>
+
+        <!-- Core Learning Stages -->
+        <section class="card">
+            <h2>Etapas de Aprendizaje (Las Entradas)</h2>
+            <p>Las matemáticas en TutorQuest se introducen a través de cuatro etapas táctiles distintas, cada una adaptada a un salto cognitivo específico en el desarrollo.</p>
+
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_InputModes.webp" class="screenshot" alt="Selección de Modos de Entrada">
+
+            <div class="input-method">
+                <h3><span>1</span> Etapa de Conteo con Dedos</h3>
+                <p>
+                    Matemáticas tácticas de 0 a 10 utilizando diseños de manos realistas para tocar y contar. Esta etapa construye un puente físico
+                    entre los números abstractos y su representación física.
+                    <br><strong>Progresión:</strong> El Nivel 1 se limita a 1 mano (máximo 5); el Nivel 2 se amplía a 2 manos (máximo 10).
+                </p>
+            </div>
+
+            <div class="input-method">
+                <h3><span>2</span> Etapa de Conteo con Dados</h3>
+                <p>
+                    Enfocada en la subitización visual: la capacidad de reconocer un grupo de objetos sin contarlos uno por uno.
+                    Hasta 4 bloques dinámicos de dados desafían al niño a reconocer sumas al instante.
+                    <br><strong>Progresión:</strong> Los Niveles 1 a 4 escalan de 1 dado hasta 4 dados (valor máximo 24).
+                </p>
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_BeginnerDiceLevel1.webp" class="screenshot" alt="Modo de Conteo con Dados">
+            </div>
+
+            <div class="input-method">
+                <h3><span>3</span> Etapa de Rueda de Números</h3>
+                <p>
+                    Navegación fluida a través de rangos numéricos mediante un desplazamiento de "rueda" física. Esto ayuda al niño a
+                    visualizar la distancia relativa entre los números y la naturaleza lineal de la recta numérica.
+                    <br><strong>Progresión:</strong> 6 Niveles que cubren rangos desde 0-10 hasta 0-100.
+                </p>
+            </div>
+
+            <div class="input-method">
+                <h3><span>4</span> Experto en Matemáticas (Entrada Numérica)</h3>
+                <p>
+                    Cálculos abstractos estándar usando un teclado numérico. Esta etapa final transiciona al niño
+                    hacia la notación formal utilizada en la educación avanzada.
+                    <br><strong>Progresión:</strong> 11 Niveles desde 0-10 hasta 0-1000, incorporando suma y resta.
+                </p>
+            </div>
+        </section>
+
+        <!-- Game Modes & Progression -->
+        <section class="card">
+            <h2>Progresión de la Campaña</h2>
+            <div class="badge">Lógica de Gamer de los 90</div>
+            <p>
+                TutorQuest utiliza un sistema clásico de progresión de "línea de estrellas". En los modos <strong>Principiante</strong> y <strong>Avanzado</strong>,
+                los niños siguen un camino de niveles con candado. Para desbloquear un nuevo nivel, el niño debe completar
+                <span class="highlight">3 hojas personalizadas</span> en su nivel actualmente activo.
+                Esto asegura un dominio constante de cada etapa antes de avanzar.
+            </p>
+
+            <h3>El Ciclo de la Obra Maestra (Modo Tutor)</h3>
+            <p>
+                Esta es la joya de la corona de nuestra pedagogía de inversión de roles. En el Modo Tutor, el niño se convierte en el maestro.
+                Diseñan una hoja de trabajo de 5 problemas para que su "Compañero" virtual los resuelva.
+            </p>
+
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_TutorModeGivePaperToSolve.webp" class="screenshot" alt="Dando problemas al Tutor">
+
+            <p>
+                ¿El truco? El Compañero no es perfecto. Está programado para cometer <span class="highlight">errores intencionales</span>.
+                El niño debe entonces revisar el trabajo del Compañero, identificar los errores y corregirlos.
+            </p>
+
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_CheckTheTutorsAnswers.webp" class="screenshot" alt="Revisando el trabajo del Tutor">
+
+            <p>
+                Finalmente, el niño sella la hoja de trabajo con una calificación de emoji. ¡Estas "Obras Maestras" completadas se guardan en el álbum
+                <span class="highlight">Mi Colección</span> e incluso se pueden volver a jugar más tarde para obtener recompensas adicionales!
+            </p>
+
+            <div class="image-grid">
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_MyTutorCheckGotDoubleChecked.webp" class="screenshot" alt="Resultados de la Doble Revisión">
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_SavedPaperInMyCollection.webp" class="screenshot" alt="Álbum de Colección">
+            </div>
+        </section>
+
+        <!-- Reward Economy -->
+        <section class="card">
+            <h2>Recompensas y Personalización</h2>
+            <p>
+                Al resolver ecuaciones y calificar obras maestras, los niños ganan monedas de oro. Estas se guardan de forma segura en su
+                billetera local y se pueden gastar en la <strong>Tienda de Avatares</strong>.
+            </p>
+
+            <div class="image-grid">
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_CharacterScreenCustomizedBoy.webp" class="screenshot" alt="Avatar de Niño Personalizado">
+                <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_CharacterScreenCustomizedGirl.webp" class="screenshot" alt="Avatar de Niña Personalizada">
+            </div>
+
+            <ul>
+                <li><strong>Ropa de Avatar:</strong> Desbloquea mamelucos acogedores, camisas, pantalones, zapatos y gafas elegantes con monedas.</li>
+                <li><strong>Personalización:</strong> Elige entre diferentes colores de cabello para hacer que el personaje sea único.</li>
+                <li><strong>Herramientas de Trabajo:</strong> Elige entre artículos de papelería de cuaderno premium y variadas fuentes de escritura a mano para cambiar el aspecto de las hojas de las "Obras Maestras".</li>
+            </ul>
+
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_CustomizeBackgroundPaperstyleFont.webp" class="screenshot" alt="Personalización de la Mesa de Trabajo">
+        </section>
+
+        <!-- Parent Corner & Administration -->
+        <section class="card">
+            <h2>El Rincón para Padres y Ajustes del Hogar</h2>
+            <div class="badge">Panel de Control para Padres</div>
+            <p>
+                El <strong>Rincón para Padres</strong> sirve como su centro administrativo para adaptar TutorQuest a las necesidades de toda su familia mientras mantiene límites estructurales.
+            </p>
+            
+            <img src="https://fluflatuet.github.io/tutorquest-privacypolicy/manual_ParentCornerOverview.webp" class="screenshot" alt="Resumen del Rincón para Padres">
+
+            <h3>👥 Gestión de Múltiples Perfiles (Dispositivos Compartidos)</h3>
+            <p>
+                Reconociendo que los dispositivos móviles se comparten frecuentemente entre hermanos, puede crear y editar perfiles distintos para cada niño de su familia. 
+                Cada niño opera dentro de su propia estructura de datos de patio de juegos absoluta: sus monedas ganadas, trajes desbloqueados, apariencias de avatar personalizadas y progresión matemática individual se rastrean de forma independiente. El cambio de perfiles está bloqueado tras la puerta del Rincón para Padres para evitar borrados accidentales o disputas entre hermanos por el gasto de monedas.
+            </p>
+
+            <h3>🔒 Configuraciones de Modos de Entrada</h3>
+            <p>
+                Cada niño aprende a un ritmo diferente. Bajo las opciones de edición de perfil, puede habilitar o deshabilitar activamente el acceso a <strong>Etapas de Aprendizaje</strong> específicas (Dedos, Dados, Rueda o Numérico). 
+                Si un modo está desactivado, aparecerá con un candado en la pantalla del mapa principal para ese perfil específico. Esto le permite restringir los modos más antiguos para desafiar a los niños avanzados o evitar que un niño más pequeño tropiece con un complejo teclado numérico antes de que aprenda a contar visualmente. Por seguridad técnica, el sistema exige que al menos un modo permanezca activo en todo momento.
+            </p>
+
+            <h3>✨ Celebraciones de Temporada y "Vistazos"</h3>
+            <p>
+                TutorQuest alterna entre 6 temporadas temáticas anuales distintas (como la <em>Temporada Espeluznante</em>, el <em>Festival de Invierno</em> o la <em>Celebración de Verano</em>). Cada temporada transforma la identidad de la aplicación con un logotipo temático personalizado y lanza artículos legendarios exclusivos en la Tienda de Avatares (como la Túnica de Mago o el Disfraz de Dinosaurio).
+            </p>
+            <ul>
+                <li><strong>El Vistazo (Sneak Peek):</strong> Exactamente 7 días antes de que comience una próxima temporada, la aplicación activa un anuncio automatizado para animar a los niños a empezar a ahorrar sus monedas.</li>
+                <li><strong>Viaje en el Tiempo Pro-Consumidor:</strong> Debido a que la aplicación funciona 100% sin conexión para proteger la privacidad de sus datos, las comprobaciones del calendario dependen del reloj de su dispositivo. Si su hijo se pierde un evento festivo, ¡puede ajustar temporalmente la configuración de la fecha de su teléfono para permitirle viajar en el tiempo y adquirir los trajes perdidos!</li>
+            </ul>
+
+            <h3>💎 Nivel Gratuito vs. Desbloqueo Premium</h3>
+            <p>
+                TutorQuest proporciona una estructura altamente equilibrada y no depredadora diseñada para respetar tanto el aprendizaje como el presupuesto familiar:
+            </p>
+            <ul>
+                <li><strong>Modo Gratuito:</strong> Permite resolver hasta 3 hojas de trabajo personalizadas por hogar diariamente. Esto introduce hitos de micro-presupuesto donde los niños aprenden a gestionar de manera responsable sus limitaciones de ingresos diarios de oro.</li>
+                <li><strong>Compra Premium Única:</strong> Elimina de forma instantánea y permanente el límite de aprendizaje diario en todos los perfiles internos. Los niños pueden realizar hojas de trabajo ilimitadas, acelerando su práctica matemática y permitiéndoles esforzarse para obtener cosméticos de temporada de alto nivel tan rápido como puedan resolver problemas.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Filadendron &bull; Diseñado para los matemáticos del mañana.
+    </footer>
+
+</body>
+</html>
